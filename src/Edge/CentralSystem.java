@@ -28,8 +28,13 @@ public class CentralSystem {
 	}
 
 	//updates customer count
-	public void updateCount(int count) {
-		int newValue = store.getCustomerCount() + count;
+	public void addCount() {
+		int newValue = store.getCustomerCount() +  - camIn.detect_person();
+		store.setCustomerCount(newValue);
+	}
+	
+	public void minusCount() {
+		int newValue = store.getCustomerCount() - camOut.detect_person();
 		store.setCustomerCount(newValue);
 	}
 
